@@ -6,7 +6,7 @@ This is just a fork of the [Modal](https://facebook.github.io/react-native/docs/
 Modified files are: </br> 
 [RCTModalHostView.h](https://github.com/facebook/react-native/blob/master/React/Views/RCTModalHostView.h), [RCTModalHostView.m](https://github.com/facebook/react-native/blob/master/React/Views/RCTModalHostView.m) (now [PopoverView](https://github.com/enzosv/react-native-popover-manager/tree/master/PopoverManager/PopoverView.h)), </br>
 [RCTModalHostViewManager.h](https://github.com/facebook/react-native/blob/master/React/Views/RCTModalHostViewManager.h), [RCTModalHostViewManager.m](https://github.com/facebook/react-native/blob/master/React/Views/RCTModalHostViewManager.m) (now [PopoverManager](https://github.com/enzosv/react-native-popover-manager/tree/master/PopoverManager/PopoverManager.h)) </br>
-and [Modal.js](https://github.com/facebook/react-native/blob/master/Libraries/Modal/Modal.js) now [popovermanager.js](https://github.com/enzosv/react-native-popover-manager/tree/master/popovermanager.js)
+and [Modal.js](https://github.com/facebook/react-native/blob/master/Libraries/Modal/Modal.js) (now [popovermanager.js](https://github.com/enzosv/react-native-popover-manager/tree/master/popovermanager.js))
 
 ## Install
 ```shell
@@ -37,9 +37,7 @@ export default class PopoverExample extends Component {
         popoverW={320}
         popoverH={200}>
         <View>
-          <Text>
-            I'm a popover
-          </Text>
+          
         </View>
       </Popover>
     );
