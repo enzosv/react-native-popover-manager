@@ -1,13 +1,14 @@
 'use strict';
 
-const AppContainer = require('AppContainer');
-const I18nManager = require('I18nManager');
-const Platform = require('Platform');
-const React = require('React');
-const StyleSheet = require('StyleSheet');
-const View = require('View');
+const AppContainer = require('react-native/Libraries/ReactNative/AppContainer');
+const React = require('react');
 
-const requireNativeComponent = require('requireNativeComponent');
+const ReactNative = require('react-native');
+const I18nManager = ReactNative.I18nManager;
+const Platform = ReactNative.Platform;
+const StyleSheet = ReactNative.StyleSheet;
+const View = ReactNative.View;
+const requireNativeComponent = ReactNative.requireNativeComponent;
 const PopoverView = requireNativeComponent('Popover', PopoverView);
 
 const PropTypes = React.PropTypes;
