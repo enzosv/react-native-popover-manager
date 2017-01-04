@@ -1,0 +1,23 @@
+{
+  "name": "react-native-popover-manager",
+  "version": "0.0.10",
+  "description": "React Native Module to present popovers for iPad",
+  "main": "popovermanager.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enzosv/react-native-popover-manager.git"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "ipad",
+    "popover"
+  ],
+  "author": "Enzo Vergara <enzo@byimplication.com> (https://github.com/enzosv)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enzosv/react-native-popover-manager/issues"
+  },
+  "homepage": "https://github.com/enzosv/react-native-popover-manager#readme"
+}

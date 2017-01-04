@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C64A2BA71E1CEAF6004AE832 /* PopoverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C64A2BA61E1CEAF6004AE832 /* PopoverManager.m */; };
 		C64A2BA81E1CEAF6004AE832 /* PopoverManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C64A2BA51E1CEAF6004AE832 /* PopoverManager.h */; };
+		C64A2BB01E1CEB2A004AE832 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C64A2BAF1E1CEB2A004AE832 /* PopoverView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		C64A2BA21E1CEAF6004AE832 /* libPopoverManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPopoverManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64A2BA51E1CEAF6004AE832 /* PopoverManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopoverManager.h; sourceTree = "<group>"; };
 		C64A2BA61E1CEAF6004AE832 /* PopoverManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopoverManager.m; sourceTree = "<group>"; };
+		C64A2BAE1E1CEB2A004AE832 /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
+		C64A2BAF1E1CEB2A004AE832 /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				C64A2BA51E1CEAF6004AE832 /* PopoverManager.h */,
 				C64A2BA61E1CEAF6004AE832 /* PopoverManager.m */,
+				C64A2BAE1E1CEB2A004AE832 /* PopoverView.h */,
+				C64A2BAF1E1CEB2A004AE832 /* PopoverView.m */,
 			);
 			path = PopoverManager;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64A2BB01E1CEB2A004AE832 /* PopoverView.m in Sources */,
 				C64A2BA71E1CEAF6004AE832 /* PopoverManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +229,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 3VE3H7TYGQ;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../React/**",
+					"$(inherited)",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/../../../node_modules/react-native/React/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -233,6 +246,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 3VE3H7TYGQ;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../React/**",
+					"$(inherited)",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/../../../node_modules/react-native/React/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
