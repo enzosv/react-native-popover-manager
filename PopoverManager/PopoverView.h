@@ -22,8 +22,10 @@
 @property (nonatomic, assign, getter=isTransparent) BOOL transparent;
 
 @property (nonatomic, copy) RCTDirectEventBlock onShow;
+@property (nonatomic, copy) RCTDirectEventBlock onClose;
 
 @property (nonatomic, weak) id<PopoverViewInteractor> delegate;
+@property (nonatomic, weak) id<UIPopoverPresentationControllerDelegate> popoverPresentationDelegate;
 
 @property (nonatomic, copy) NSArray<NSString *> *supportedOrientations;
 @property (nonatomic, copy) RCTDirectEventBlock onOrientationChange;

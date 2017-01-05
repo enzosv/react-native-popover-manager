@@ -17,7 +17,7 @@
 
 #import <UIKit/UIKit.h>
 
-@implementation PopoverView
+@implementation PopoverView 
 {
 	__weak RCTBridge *_bridge;
 	BOOL _isPresented;
@@ -155,6 +155,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:coder)
 {
 	_modalViewController.modalPresentationStyle = transparent ? UIModalPresentationOverFullScreen : UIModalPresentationFullScreen;
 }
+
 
 #if !TARGET_OS_TV
 - (UIInterfaceOrientationMask)supportedOrientationsMask

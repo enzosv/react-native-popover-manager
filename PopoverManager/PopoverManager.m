@@ -34,8 +34,8 @@
 
 @end
 
-@interface PopoverManager () <PopoverViewInteractor>
-
+@interface PopoverManager () <PopoverViewInteractor, UIPopoverPresentationControllerDelegate>
+@property (nonatomic, copy) RCTDirectEventBlock onClose;
 @end
 
 @implementation PopoverManager
@@ -67,7 +67,9 @@ RCT_EXPORT_MODULE()
 		viewController.modalPresentationStyle = UIModalPresentationPopover;
 		viewController.preferredContentSize = CGSizeMake([popoverView.popoverW doubleValue], [popoverView.popoverH doubleValue]);
 		viewController.popoverPresentationController.sourceView = v;
-		viewController.popoverPresentationController.sourceRect = v.frame;
+		viewController.popoverPresentationController.sourceRect = v.bounds;
+		viewController.popoverPresentationController.delegate = self;
+		self.onClose = popoverView.onClose;
 	}
 	
 	dispatch_block_t completionBlock = ^{
@@ -88,7 +90,11 @@ RCT_EXPORT_MODULE()
 	if (_dismissalBlock) {
 		_dismissalBlock([popoverView reactViewController], viewController, animated, nil);
 	} else {
-		[viewController dismissViewControllerAnimated:animated completion:nil];
+		[viewController dismissViewControllerAnimated:animated completion:^{
+			if(popoverView.onClose){
+				popoverView.onClose(nil);
+			}
+		}];
 	}
 }
 
@@ -106,9 +112,15 @@ RCT_EXPORT_MODULE()
 	[_hostViews removeAllObjects];
 }
 
+-(void) popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController *)popoverPresentationController{
+	if(self.onClose){
+		self.onClose(nil);
+	}
+}
 
 RCT_EXPORT_VIEW_PROPERTY(transparent, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(onShow, RCTDirectEventBlock)
+RCT_EXPORT_VIEW_PROPERTY(onClose, RCTDirectEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(supportedOrientations, NSArray)
 RCT_EXPORT_VIEW_PROPERTY(onOrientationChange, RCTDirectEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(originX, NSNumber)

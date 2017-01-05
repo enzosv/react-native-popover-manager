@@ -5,7 +5,6 @@ const React = require('react');
 
 const ReactNative = require('react-native');
 const I18nManager = ReactNative.I18nManager;
-const Platform = ReactNative.Platform;
 const StyleSheet = ReactNative.StyleSheet;
 const View = ReactNative.View;
 const requireNativeComponent = ReactNative.requireNativeComponent;
@@ -31,13 +30,9 @@ class Popover extends React.Component {
      */
     visible: PropTypes.bool,
     /**
-     * The `onRequestClose` callback is called when the user taps the hardware back button.
-     * @platform android
-     */
-    onRequestClose: Platform.OS === 'android' ? PropTypes.func.isRequired : PropTypes.func,
-    /**
      * The `onShow` prop allows passing a function that will be called once the modal has been shown.
      */
+    onClose: PropTypes.func,
     onShow: PropTypes.func,
     /**
      * The `supportedOrientations` prop allows the modal to be rotated to any of the specified orientations.
@@ -85,8 +80,8 @@ class Popover extends React.Component {
         popoverW={this.props.popoverW}
         popoverH={this.props.popoverH}
         transparent={this.props.transparent}
-        onRequestClose={this.props.onRequestClose}
         onShow={this.props.onShow}
+        onClose={this.props.onClose}
         style={styles.modal}
         onStartShouldSetResponder={this._shouldSetResponder}
         supportedOrientations={this.props.supportedOrientations}
