@@ -6,16 +6,15 @@
 //  Copyright © 2017 By Implication, Inc. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "PopoverView.h"
 
-#import "RCTAssert.h"
-#import "RCTBridge.h"
-#import "RCTModalHostViewController.h"
-#import "RCTTouchHandler.h"
-#import "RCTUIManager.h"
-#import "UIView+React.h"
-
-#import <UIKit/UIKit.h>
+#import <React/RCTAssert.h>
+#import <React/RCTBridge.h>
+#import <React/RCTModalHostViewController.h>
+#import <React/RCTTouchHandler.h>
+#import <React/RCTUIManager.h>
+#import <React/UIView+React.h>
 
 @implementation PopoverView 
 {

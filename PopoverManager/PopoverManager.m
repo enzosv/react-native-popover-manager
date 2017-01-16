@@ -9,13 +9,13 @@
 #define IPAD    UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
 
 #import "PopoverManager.h"
-
-#import "RCTBridge.h"
 #import "PopoverView.h"
-#import "RCTModalHostViewController.h"
-#import "RCTTouchHandler.h"
-#import "RCTShadowView.h"
-#import "RCTUtils.h"
+
+#import <React/RCTBridge.h>
+#import <React/RCTModalHostViewController.h>
+#import <React/RCTTouchHandler.h>
+#import <React/RCTShadowView.h>
+#import <React/RCTUtils.h>
 
 @interface PopoverShadowView : RCTShadowView
 

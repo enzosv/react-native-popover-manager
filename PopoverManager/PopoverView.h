@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#import "RCTInvalidating.h"
 #import "PopoverManager.h"
-#import "RCTView.h"
+
+#import <React/RCTInvalidating.h>
+#import <React/RCTView.h>
 
 @class RCTBridge;
 @class RCTModalHostViewController;

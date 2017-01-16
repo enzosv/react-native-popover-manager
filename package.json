@@ -1,6 +1,6 @@
 {
   "name": "react-native-popover-manager",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "React Native Module to present popovers for iPad",
   "main": "popovermanager.js",
   "repository": {

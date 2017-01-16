@@ -6,9 +6,8 @@
 //  Copyright © 2017 By Implication, Inc. All rights reserved.
 //
 
-#import "RCTViewManager.h"
-
-#import "RCTInvalidating.h"
+#import <React/RCTViewManager.h>
+#import <React/RCTInvalidating.h>
 
 typedef void (^RCTModalViewInteractionBlock)(UIViewController *reactViewController, UIViewController *viewController, BOOL animated, dispatch_block_t completionBlock);
 
